@@ -37,9 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
   var mapMarkers = <Marker>[
     Marker(
       markerId: MarkerId('marker_1'),
-      position: LatLng(47.6, 8.8796),
+      position: const LatLng(47.6, 8.8796),
       consumeTapEvents: true,
-      infoWindow: InfoWindow(
+      infoWindow: const InfoWindow(
         title: 'PlatformMarker',
         snippet: "Hi I'm a Platform Marker",
       ),
@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
             compassEnabled: true,
             onMapCreated: (controller) {
               mapController = controller;
-              Future.delayed(Duration(seconds: 2)).then(
+              Future.delayed(const Duration(seconds: 2)).then(
                 (_) {
                   controller.animateCamera(
                     CameraUpdate.newCameraPosition(
